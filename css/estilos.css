@@ -1,0 +1,14 @@
+div {
+  width: 100%;
+}
+.lista {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 300px;
+  max-height: 300px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}

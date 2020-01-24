@@ -1,57 +1,99 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-      <meta charset="utf-8"/>
-      <title>FavoriteMonster</title>
-      <link rel="stylesheet" href="css/normalize.css">
-      <link rel="stylesheet" href="css/estilos.css">
-      <link rel="stylesheet" href="css/skeleton.css">
-      <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0" >
-
+    <meta charset="utf-8" />
+    <title>FavoritePerson</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="css/skeleton.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0"
+    />
   </head>
   <body>
-    <div class="contenedor">
-
-    <header class="header" >
-      <div class="">
-
-        <!-- Menu
-      -->
-        <nav class="">
-          <ul class="">
-
-              <button class="">
-                Personajes
+    <header></header>
+    <div class="container">
+      <section class="">
+        <!-- sección sobre los personajes-->
+        <div class="">
+          <div class="galeria">
+            <h2 class="">Elije tu personaje favorito</h2>
+            <div class="banner" id="banner">
+              <!-- datos json-->
+              <button onclick="plusDivs(-1)">
+                <=
               </button>
-
-              <button class="">
-                Caracteristicas
+              <button onclick="plusDivs(1)">
+                =>
               </button>
-          </ul>
-        </nav>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      </div>
-    </header>
-  <!-- sección sobre los personajes-->
-  <section class="" >
-    <div class="">
-
-  <ul class="galeria" >
-
-    <h2 class="">Elije tu xxxx favorito</h2>
-    <div class="banner" id="banner">
+      <!-- Este es el modal -->
+      <section>
+        <div>
+          <div
+            class="modal fade"
+            id="modal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel"></h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body" id="modal-text">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-     <!-- datos json-->
 
-  </ul>
-</div>
-
-</section>
-
-  <footer class="footer">
-  </footer>
-
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="js/request.js"></script>
+    <footer class="footer"></footer>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/request.js"></script>
+    <script src="js/carru.js"></script>
   </body>
 </html>
