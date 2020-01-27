@@ -30,27 +30,29 @@ function solicitud() {
       axios.spread(function(users, photos) {
         dinamizmo();
         function dinamizmo() {
-          //modal es la pestaña de muestra al elegir un personaje
+          //modal es la pestaÃƒÂ±a de muestra al elegir un personaje
           var modal = document.getElementById("modal-text");
           //Un for que recorre cada post basado en su limite
           for (let i in users.data && photos.data) {
-            /*CREACIÓN DE ELEMENTOS DINÁMICOS*/
-            //Creo el div que contendrá carrusel
+            /*CREACIÃƒâ€œN DE ELEMENTOS DINÃƒÂMICOS*/
+            //Creo el div que contendrÃƒÂ¡ carrusel
             datos = document.createElement("div");
             //Le creo una clase al div
             datos.classList.add("lista");
 
-            /*Descripción general carrusel*/
+            /*DescripciÃƒÂ³n general carrusel*/
             //Creamos el h3 de la descripcion en el carrusel
             //importamos data del json y lo volvemos hijo del div principal
             habilidad = document.createElement("h3");
+            habilidad.classList.add("habilidad");
             habilidad.innerText = photos.data[i].title;
             datos.appendChild(habilidad);
 
             /*Nombre personaje carrusel*/
-            //Creación del h1 que contiene nombre del personaje/usuario
+            //CreaciÃƒÂ³n del h1 que contiene nombre del personaje/usuario
             title = document.createElement("h1");
             title.innerText = users.data[i].username;
+            title.classList.add("nom");
             datos.appendChild(title);
 
             /*boton de elegir*/
@@ -61,23 +63,26 @@ function solicitud() {
             img = document.createElement("img");
             //extraer imagenes de json
             img.src = photos.data[i].url;
+
             //Creamos un id para cada div del carrusel
             datos.id = "background" + i;
             //vuelvo el div hijo del id banner
             banner.appendChild(datos);
             //convierto las imagenes del json en el fondo del carrusel
             datos.style.backgroundImage = "url('" + photos.data[i].url + "')";
+
             //Texto del boton elegir
-            elegir = document.createElement("a");
+            elegir = document.createElement("h2");
             //el texto del boton del carrusel
             elegir.innerText = "Elegir";
-            //detección del id para mostrar segun el post en modal de boostrap
+
+            //detecciÃƒÂ³n del id para mostrar segun el post en modal de boostrap
             elegir.id = "elegir" + i;
             //Muestra el modal del boostrap
             elegir.onclick = function() {
               //esta funcion es la que modifica la visibildiad del modal con jquery
               $("#modal").modal("show");
-              //datos extraidos de users para una descripción del personaje elegido
+              //datos extraidos de users para una descripciÃƒÂ³n del personaje elegido
               modal.innerText =
                 users.data[i].name +
                 "\n" +
@@ -97,6 +102,7 @@ function solicitud() {
             };
 
             boton.appendChild(elegir);
+            boton.classList.add("elector");
           }
         }
 
@@ -116,7 +122,7 @@ function solicitud() {
 
 //Creamos los elementos dinamicos
 function invoVariables() {
-  //Banner será el id padre que desplegará los principales datos json
+  //Banner serÃƒÂ¡ el id padre que desplegarÃƒÂ¡ los principales datos json
   var banner = document.getElementById("banner");
   var img = document.createElement("img");
 

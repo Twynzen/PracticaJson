@@ -1,3 +1,88 @@
+.titulo {
+  text-align: center;
+  margin: 0.5em;
+  padding: 10px;
+  background-color: aquamarine;
+  font-size: 50px;
+  font-family: "Bungee Shade";
+  border-radius: 30px;
+  color: rgb(24, 22, 22);
+  text-shadow: 2px 2px 4px #000000;
+}
+.boton {
+  background: transparent;
+  border-radius: 6px;
+  color: #0099cc;
+}
+.boton.i:hover {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.196516106442577) 0%,
+    rgba(2, 0, 36, 0.4738270308123249) 0%,
+    rgba(0, 212, 255, 0.08727240896358546) 100%
+  );
+}
+.boton.d:hover {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    270deg,
+    rgba(0, 0, 0, 0.196516106442577) 0%,
+    rgba(2, 0, 36, 0.4738270308123249) 0%,
+    rgba(0, 212, 255, 0.08727240896358546) 100%
+  );
+}
+.boton.i {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+  height: 100%;
+}
+.boton.d {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translateY(-50%);
+  height: 100%;
+}
+.banner {
+  position: relative;
+}
+.habilidad {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.nom {
+  position: absolute;
+  text-align: center;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+.elector {
+  position: absolute;
+  text-align: center;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  background-color: rgb(0, 0, 0);
+  color: ghostwhite;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.elector:hover {
+  background-color: aquamarine;
+
+  color: rgb(0, 0, 0);
+}
 div {
   width: 100%;
 }
